@@ -1,0 +1,6 @@
+body{
+    min-height: 100vh;
+    background: linear-gradient(35deg, #d5cbb8 0%, #9b9282 55%, #5b554b 100%);
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
