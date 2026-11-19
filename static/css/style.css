@@ -1,52 +1,150 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-
-body{
-    min-height: 100vh;
-    background: linear-gradient(35deg, #d5cbb8 0%, #9b9282 55%, #5b554b 100%);
-    background-attachment: fixed;
-    font-family: sans-serif;
+body {
+  min-height: 100vh;
+  background: linear-gradient(35deg, #d5cbb8 0%, #9b9282 55%, #5b554b 100%);
+  background-attachment: fixed;
+  font-family: sans-serif;
 }
 
-.contenedor-tarjetas{
-    display: flex;
-    justify-content: center;
-    gap: 120px;
-    margin-top: 60px;
+.contenedor-tarjetas {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  margin-top: 60px;
 }
 
-.tarjeta{
-    background-color: #D9D9D9;
-    width: 300px;
-    padding: 30px;
-    border-radius: 40px;
+.tarjeta {
+  background-color: #d9d9d9;
+  width: 300px;
+  padding: 30px;
+  border-radius: 40px;
 }
 
 .tarjeta h3 {
-    margin-bottom: 25px;
-    font-weight: normal;
+  margin-bottom: 25px;
+  font-weight: normal;
 }
 
-.lista-nombres{
-    list-style: none;
+.lista-nombres {
+  list-style: none;
 }
 
 .lista-nombres li {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .enlace-tarjeta {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.2s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
 }
 
 .enlace-tarjeta:hover {
-    transform:  translateY(-4px);
+  transform: translateY(-4px);
+}
+
+/* NAVBAR */
+
+.burbuja {
+  max-width: 1100px;
+  margin: 30px auto 0;
+  padding: 16px 36px;
+  background-color: rgba(110, 108, 102, 0.45);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.img-logo {
+  height: 68px;
+  width: auto;
+  display: block;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.boton-menu {
+  text-decoration: none;
+  color: #11120d;
+  background: linear-gradient(90deg, #fffbf4 0%, #fffbf4 55%, #8a867e 100%);
+  padding: 16px 42px;
+  border-radius: 999px;
+  font-size: 20px;
+  font-weight: 500;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.boton-menu:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* =========================================================*/
+
+/* Margen lateral para que no pegue a los bordes en pantallas medianas */
+body {
+  padding: 0 20px 40px;
+}
+
+/* RESPONSIVE (Tablets y Teléfonos) */
+@media (max-width: 850px) {
+  .burbuja {
+    flex-direction: column;
+    border-radius: 35px;
+    padding: 20px;
+    margin-top: 20px;
+    gap: 16px;
+  }
+
+  .img-logo {
+    height: 55px;
+  }
+
+  .menu {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .boton-menu {
+    padding: 12px 22px;
+    font-size: 16px;
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .contenedor-tarjetas {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 35px;
+  }
+
+  .enlace-tarjeta {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .tarjeta {
+    width: 100%;
+    padding: 25px;
+    border-radius: 30px;
+  }
 }
