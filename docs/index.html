@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio</title>
 
-    <link rel="stylesheet" href="../static/css/style.css" />
-     <link
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
@@ -16,7 +16,7 @@
     <div class="burbuja">
       <div class="logo-container">
         <img
-          src="../static/img/1-removebg-preview.png"
+          src="static/img/1-removebg-preview.png"
           alt="Red Dominical"
           class="img-logo"
         />
@@ -33,13 +33,12 @@
     <div class="contenedor-tarjetas">
       <a href="Asistencia.html" class="enlace-tarjeta">
         <div class="tarjeta">
-          <h3>Asistencia</h3>
+          <h3>Asistencia 13/01/2026</h3>
           <ul class="lista-nombres">
-            {% for persona in asistencias %}
-              <li>{{ persona.nombre }}</li>
-            {% else %}
-              <li>Sin asistencias aún</li>
-            {% endfor %}
+            <li>kevin</li>
+            <li>maria</li>
+            <li>juana</li>
+            <li>steven</li>
           </ul>
         </div>
       </a>
@@ -49,11 +48,10 @@
         <div class="tarjeta">
           <h3>Miembros</h3>
           <ul class="lista-nombres">
-            {% for miembro in miembros %}
-              <li>{{ miembro.nombre }}</li>
-            {% else %}
-              <li>Sin miembros aún</li>
-            {% endfor %}
+            <li>kevin</li>
+            <li>maria</li>
+            <li>juana</li>
+            <li>steven</li>
           </ul>
         </div>
       </a>
