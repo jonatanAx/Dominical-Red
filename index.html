@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio</title>
+
+    <link rel="stylesheet" href="../static/css/style.css" />
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="burbuja">
+      <div class="logo-container">
+        <img
+          src="../static/img/1-removebg-preview.png"
+          alt="Red Dominical"
+          class="img-logo"
+        />
+      </div>
+
+      <nav class="menu">
+        <a href="Asistencia.html" class="boton-menu">Asistencia</a>
+        <a href="Miembros.html" class="boton-menu">Miembros</a>
+        <a href="Faltas.html" class="boton-menu">Faltas</a>
+      </nav>
+    </div>
+
+    <!---CONTENEDOR TARJETAS-->
+    <div class="contenedor-tarjetas">
+      <a href="Asistencia.html" class="enlace-tarjeta">
+        <div class="tarjeta">
+          <h3>Asistencia</h3>
+          <ul class="lista-nombres">
+            {% for persona in asistencias %}
+              <li>{{ persona.nombre }}</li>
+            {% else %}
+              <li>Sin asistencias aún</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </a>
+
+      <!--CONTENEDOR INVITADOS-->
+      <a href="Miembros.html" class="enlace-tarjeta">
+        <div class="tarjeta">
+          <h3>Miembros</h3>
+          <ul class="lista-nombres">
+            {% for miembro in miembros %}
+              <li>{{ miembro.nombre }}</li>
+            {% else %}
+              <li>Sin miembros aún</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </a>
+    </div>
+  </body>
+</html>
