@@ -6,6 +6,10 @@
     <title>Inicio</title>
 
     <link rel="stylesheet" href="../static/css/style.css" />
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
   </head>
   <body>
     <!-- navbar -->
@@ -31,7 +35,11 @@
         <div class="tarjeta">
           <h3>Asistencia</h3>
           <ul class="lista-nombres">
-            <li></li>
+            {% for persona in asistencias %}
+              <li>{{ persona.nombre }}</li>
+            {% else %}
+              <li>Sin asistencias aún</li>
+            {% endfor %}
           </ul>
         </div>
       </a>
@@ -41,7 +49,11 @@
         <div class="tarjeta">
           <h3>Miembros</h3>
           <ul class="lista-nombres">
-            <li></li>
+            {% for miembro in miembros %}
+              <li>{{ miembro.nombre }}</li>
+            {% else %}
+              <li>Sin miembros aún</li>
+            {% endfor %}
           </ul>
         </div>
       </a>

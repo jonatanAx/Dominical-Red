@@ -95,6 +95,163 @@ body {
   opacity: 0.95;
 }
 
+
+
+
+/* NAVBAR DE ASISTENCIA IGUAL AL DISEÑO */
+.burbuja-asistencia {
+  max-width: 780px;
+  padding: 12px 32px;
+  gap: 20px;
+}
+
+.burbuja-asistencia .menu {
+  order: 1;
+  gap: 14px;
+}
+
+.burbuja-asistencia .logo-container {
+  order: 2;
+}
+
+.burbuja-asistencia .img-logo {
+  height: 54px;
+}
+
+.icono-volver {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #11120d;
+  font-size: 36px;
+  margin-right: 4px;
+  transition: transform 0.2s ease;
+}
+
+.icono-volver:hover {
+  transform: translateX(-3px);
+}
+
+.burbuja-asistencia .boton-menu {
+  padding: 10px 26px;
+  font-size: 16px;
+  background: linear-gradient(90deg, #ecebe7 0%, #dcdad5 65%, #9d9991 100%);
+}
+
+.burbuja-asistencia .buscador-menu {
+  padding: 10px 18px;
+}
+
+.burbuja-asistencia .input-buscar {
+  width: 130px;
+  font-size: 15px;
+}
+
+/* PANEL Y BOTÓN (+) DE ASISTENCIA */
+.area-asistencia {
+  position: relative;
+  max-width: 860px;
+  margin: 36px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel-asistencia {
+  background-color: #dcdcdc;
+  width: 100%;
+  max-width: 520px;
+  min-height: 410px;
+  padding: 28px 34px;
+  border-radius: 36px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.fecha-asistencia {
+  font-size: 17px;
+  color: #11120d;
+  margin-bottom: 28px;
+}
+
+.scroll-nombres {
+  max-height: 270px;
+  overflow-y: auto;
+  padding-right: 16px;
+}
+
+.scroll-nombres::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scroll-nombres::-webkit-scrollbar-thumb {
+  background-color: #6e6b65;
+  border-radius: 999px;
+}
+
+.lista-asistencia {
+  list-style: none;
+}
+
+.lista-asistencia li {
+  font-size: 17px;
+  color: #11120d;
+  margin-bottom: 20px;
+}
+
+.btn-mas {
+  position: fixed;
+  right: 52px;
+  top: 52%;
+  transform: translateY(-50%);
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: none;
+  background-color: #e6e5e1;
+  color: #11120d;
+  font-size: 28px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-mas:hover {
+  transform: translateY(-50%) scale(1.06);
+  background-color: #f4f2ec;
+}
+
+ .buscador-menu {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+ }
+
+ .input-buscar {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #11120d;
+  font-size: 16px;
+  width: 140px;
+ }
+
+ .input-buscar::placeholder {
+  color: #3a3834;
+ }
+
+
+
+
+
+
+
+
+
+
 /* =========================================================*/
 
 /* Margen lateral para que no pegue a los bordes en pantallas medianas */
