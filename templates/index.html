@@ -6,7 +6,7 @@
     <title>Inicio</title>
 
     <link rel="stylesheet" href="/static/css/style.css" />
-     <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
@@ -15,11 +15,13 @@
     <!-- navbar -->
     <div class="burbuja">
       <div class="logo-container">
-        <img
-          src="/static/img/1-removebg-preview.png"
-          alt="Red Dominical"
-          class="img-logo"
-        />
+        <a href="index.html">
+          <img
+            src="/static/img/1-removebg-preview.png"
+            alt="Red Dominical"
+            class="img-logo"
+          />
+        </a>
       </div>
 
       <nav class="menu">
@@ -36,9 +38,9 @@
           <h3>Asistencia</h3>
           <ul class="lista-nombres">
             {% for persona in asistencias %}
-              <li>{{ persona.nombre }}</li>
+            <li>{{ persona.nombre }}</li>
             {% else %}
-              <li>Sin asistencias aún</li>
+            <li>Sin asistencias aún</li>
             {% endfor %}
           </ul>
         </div>
@@ -50,9 +52,9 @@
           <h3>Miembros</h3>
           <ul class="lista-nombres">
             {% for miembro in miembros %}
-              <li>{{ miembro.nombre }}</li>
+            <li>{{ miembro.nombre }}</li>
             {% else %}
-              <li>Sin miembros aún</li>
+            <li>Sin miembros aún</li>
             {% endfor %}
           </ul>
         </div>
