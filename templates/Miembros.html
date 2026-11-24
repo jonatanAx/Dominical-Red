@@ -11,18 +11,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
   </head>
-  <body class="lista-asistencia">
+  <body class="lista-Miembros">
     <div class="burbuja burbuja-miembros">
       <div class="logo-container">
         <a href="index.html">
           <img
             src="../static/img/1-removebg-preview.png"
             alt="Red Dominical"
-            class="img-logo"
+            class="img-logo-M"
           />
         </a>
       </div>
-      <div class="menu">
+      <div class="menu-M">
         <a href="index.html" class="icono-volver" aria-label="Regresar">
           <i class="fa-sharp fa-regular fa-circle-left"></i>
         </a>
@@ -41,12 +41,28 @@
       </div>
     </div>
 
-    <div class="area-asistencia">
-      <div class="panel-asistencia">
-        <p class="fecha-asistencia">{{ fecha_actual }}</p>
+    <div class="area-Miembros">
+      <div class="panel-asistencia-M">
+        <div class="acciones-M">
+          <button type="button" class="btn-nuevos-M">Miembros Nuevos</button>
 
-        <div class="scroll-nombres">
-          <ul class="lista-asistencia">
+          <button type="button" class="btn-icono-M" aria-label="Eliminar miembro">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+
+          <button type="button" class="btn-icono-M" aria-label="Editar miembro">
+            <i class="fa-regular fa-pen-to-square"></i>
+          </button>
+
+          <button type="button" class="btn-icono-M" aria-label="Agregar miembro">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+
+        <p class="fecha-asistencia-M">{{ fecha_actual }}</p>
+
+        <div class="scroll-nombres-M">
+          <ul class="lista-asistencia-M">
             {% for miembro in miembros %}
             <li>{{ miembro.nombre }}</li>
             {% else %}
@@ -55,10 +71,6 @@
           </ul>
         </div>
       </div>
-
-      <button type="button" class="btn-mas" aria-label="Agregar Asistencia">
-        <i class="fa-solid fa-plus"></i>
-      </button>
     </div>
   </body>
 </html>
