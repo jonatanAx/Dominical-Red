@@ -1,9 +1,11 @@
-* {
+/* Reset básico: quita márgenes y rellenos por defecto y hace que padding/border no agranden el tamaño total */
+- {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Fondo degradado diagonal fijo en toda la pantalla y tipografía base */
 body {
   min-height: 100vh;
   background: linear-gradient(35deg, #d5cbb8 0%, #9b9282 55%, #5b554b 100%);
@@ -11,6 +13,7 @@ body {
   font-family: sans-serif;
 }
 
+/* Contenedor principal de las tarjetas en Inicio, centradas y separadas horizontalmente */
 .contenedor-tarjetas {
   display: flex;
   justify-content: center;
@@ -18,6 +21,7 @@ body {
   margin-top: 60px;
 }
 
+/* Tarjeta gris redondeada de Inicio */
 .tarjeta {
   background-color: #d9d9d9;
   width: 300px;
@@ -25,19 +29,23 @@ body {
   border-radius: 40px;
 }
 
+/* Título dentro de cada tarjeta */
 .tarjeta h3 {
   margin-bottom: 25px;
   font-weight: normal;
 }
 
+/* Lista sin viñetas dentro de las tarjetas */
 .lista-nombres {
   list-style: none;
 }
 
+/* Separación vertical entre cada nombre de la lista */
 .lista-nombres li {
   margin-bottom: 25px;
 }
 
+/* Enlace que envuelve la tarjeta completa y sube ligeramente al pasar el cursor */
 .enlace-tarjeta {
   display: block;
   text-decoration: none;
@@ -49,8 +57,9 @@ body {
   transform: translateY(-4px);
 }
 
-/* NAVBAR */
+/* ==================== NAVBAR PRINCIPAL ==================== */
 
+/* Barra tipo burbuja translúcida con efecto cristal (blur) y bordes redondeados */
 .burbuja {
   max-width: 1100px;
   margin: 30px auto 0;
@@ -65,18 +74,26 @@ body {
   gap: 24px;
 }
 
+/* Tamaño del logo en el navbar principal */
 .img-logo {
   height: 68px;
   width: auto;
   display: block;
 }
 
+/* Fila de botones del menú */
 .menu {
   display: flex;
   align-items: center;
   gap: 24px;
 }
 
+.burbuja .menu {
+  flex: 1;
+  justify-content: center;
+}
+
+/* Botón tipo píldora con degradado claro a gris */
 .boton-menu {
   text-decoration: none;
   color: #11120d;
@@ -90,21 +107,22 @@ body {
     opacity 0.2s ease;
 }
 
+/* Pequeño levantamiento al pasar el ratón por el botón */
 .boton-menu:hover {
   transform: translateY(-2px);
   opacity: 0.95;
 }
 
+/* ==================== NAVBAR DE ASISTENCIA ==================== */
 
-
-
-/* NAVBAR DE ASISTENCIA IGUAL AL DISEÑO */
+/* Versión más angosta de la burbuja para la vista de Asistencia */
 .burbuja-asistencia {
   max-width: 780px;
   padding: 12px 32px;
   gap: 20px;
 }
 
+/* Invierte el orden visual para poner el menú primero y el logo después */
 .burbuja-asistencia .menu {
   order: 1;
   gap: 14px;
@@ -114,10 +132,12 @@ body {
   order: 2;
 }
 
+/* Logo más pequeño en esta vista */
 .burbuja-asistencia .img-logo {
   height: 54px;
 }
 
+/* Botón de flecha para regresar */
 .icono-volver {
   display: inline-flex;
   align-items: center;
@@ -133,6 +153,7 @@ body {
   transform: translateX(-3px);
 }
 
+/* Botones más compactos dentro de la burbuja de Asistencia */
 .burbuja-asistencia .boton-menu {
   padding: 10px 26px;
   font-size: 16px;
@@ -148,7 +169,9 @@ body {
   font-size: 15px;
 }
 
-/* PANEL Y BOTÓN (+) DE ASISTENCIA */
+/* ==================== PANEL Y BOTÓN (+) DE ASISTENCIA ==================== */
+
+/* Centra el panel de Asistencia debajo del navbar */
 .area-asistencia {
   position: relative;
   max-width: 860px;
@@ -158,6 +181,7 @@ body {
   align-items: center;
 }
 
+/* Tarjeta grande gris donde se muestra la fecha y la lista */
 .panel-asistencia {
   background-color: #dcdcdc;
   width: 100%;
@@ -168,22 +192,26 @@ body {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
+/* Texto de fecha arriba en el panel */
 .fecha-asistencia {
   font-size: 17px;
   color: #11120d;
   margin-bottom: 28px;
 }
 
+/* Área con scroll vertical si la lista de nombres es larga */
 .scroll-nombres {
   max-height: 270px;
   overflow-y: auto;
   padding-right: 16px;
 }
 
+/* Ancho de la barra de scroll en Chrome/Edge */
 .scroll-nombres::-webkit-scrollbar {
   width: 4px;
 }
 
+/* Color y redondeo del pulgar de la barra de scroll */
 .scroll-nombres::-webkit-scrollbar-thumb {
   background-color: #6e6b65;
   border-radius: 999px;
@@ -199,6 +227,7 @@ body {
   margin-bottom: 20px;
 }
 
+/* Botón circular flotante (+) fijado a la derecha de la pantalla */
 .btn-mas {
   position: fixed;
   right: 52px;
@@ -224,28 +253,29 @@ body {
   background-color: #f4f2ec;
 }
 
- .buscador-menu {
+/* Contenedor del ícono de lupa y el input de búsqueda */
+.buscador-menu {
   display: inline-flex;
   align-items: center;
   gap: 10px;
- }
+}
 
- .input-buscar {
+/* Input transparente sin borde para integrarse a la píldora */
+.input-buscar {
   border: none;
   outline: none;
   background: transparent;
   color: #11120d;
   font-size: 16px;
   width: 140px;
- }
+}
 
- .input-buscar::placeholder {
+.input-buscar::placeholder {
   color: #3a3834;
- }
+}
 
+/* ==================== NAVBAR DE MIEMBROS (-M) ==================== */
 
-
-/* NAVBAR DE MIEMBROS */
 .burbuja-miembros {
   max-width: 780px;
   padding: 12px 32px;
@@ -284,7 +314,8 @@ body {
   font-size: 15px;
 }
 
-/* PANEL DE MIEMBROS */
+/* ==================== PANEL DE MIEMBROS (-M) ==================== */
+
 .area-Miembros {
   position: relative;
   max-width: 960px;
@@ -335,7 +366,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* BOTONES SUPERIORES DENTRO DEL PANEL DE MIEMBROS */
+/* Fila superior derecha con "Miembros Nuevos" y los botones circulares */
 .acciones-M {
   display: flex;
   justify-content: flex-end;
@@ -380,21 +411,87 @@ body {
   background-color: rgba(255, 255, 255, 0.45);
 }
 
+/* ==================== MENÚ DESPLEGABLE DE PRIVILEGIOS ==================== */
 
+/* z-index para que la burbuja y su menú floten por encima de las tarjetas de abajo */
+.burbuja {
+  position: relative;
+  z-index: 20;
+}
 
+/* Tamaño un poco más compacto para que quepan los 4 botones en fila */
+.burbuja .boton-menu {
+  padding: 14px 30px;
+  font-size: 18px;
+}
 
+/* order: -1 coloca "Privilegios" a la izquierda dentro del flex .menu */
+.dropdown-privilegios {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  order: -1;
+}
 
+/* Resetea estilos de <button> para que luzca igual que los enlaces .boton-menu */
+.btn-privilegios {
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-privilegios:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.lista-privilegios {
+  display: none;
+  position: absolute;
+  top: calc(100% + 12px);
+  left: -10px;
+  min-width: 190px;
+  padding: 18px 24px 24px;
+  background-color: rgba(110, 108, 102, 0.72);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 34px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  z-index: 50;
+}
+
+/* Muestra la lista al pasar el ratón o al tocar/enfocar en pantallas táctiles */
+.dropdown-privilegios:hover .lista-privilegios,
+.dropdown-privilegios:focus-within .lista-privilegios {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Cada opción (Ujieres, Alabanza, Sonido, Limpieza) con estilo píldora ajustado al texto */
+.burbuja .lista-privilegios .item-privilegio {
+  padding: 10px 24px;
+  font-size: 16px;
+  text-align: center;
+  width: auto;
+}
 
 /* =========================================================*/
 
-/* Margen lateral para que no pegue a los bordes en pantallas medianas */
+/* Margen lateral para que el contenido no pegue a los bordes en pantallas medianas */
 body {
   padding: 0 20px 40px;
 }
 
-/* RESPONSIVE (Tablets y Teléfonos) */
+/* ==================== RESPONSIVE (Móviles y tablets <= 850px) ==================== */
 @media (max-width: 850px) {
-  .burbuja {
+  /* Apila logo y menú en columna dentro de las burbujas */
+  .burbuja,
+  .burbuja-asistencia,
+  .burbuja-miembros {
     flex-direction: column;
     border-radius: 35px;
     padding: 20px;
@@ -402,11 +499,21 @@ body {
     gap: 16px;
   }
 
-  .img-logo {
+  /* Devuelve el orden normal en móvil para que el logo quede arriba */
+  .burbuja-asistencia .logo-container,
+  .burbuja-asistencia .menu,
+  .burbuja-miembros .logo-container,
+  .burbuja-miembros .menu-M {
+    order: 0;
+  }
+
+  .img-logo,
+  .img-logo-M {
     height: 55px;
   }
 
-  .menu {
+  .menu,
+  .menu-M {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
@@ -420,6 +527,31 @@ body {
     text-align: center;
   }
 
+  .burbuja-asistencia .input-buscar,
+  .burbuja-miembros .input-buscar,
+  .input-buscar {
+    width: 100%;
+  }
+
+  /* Privilegios ocupa el ancho disponible en móvil */
+  .dropdown-privilegios {
+    flex: 1 1 auto;
+    justify-content: center;
+    order: 0;
+  }
+
+  .btn-privilegios {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .lista-privilegios {
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  /* Tarjetas de Inicio apiladas verticalmente en móvil */
   .contenedor-tarjetas {
     flex-direction: column;
     align-items: center;
@@ -436,5 +568,58 @@ body {
     width: 100%;
     padding: 25px;
     border-radius: 30px;
+  }
+
+  /* Ajustes de espacio en la vista de Asistencia en móvil */
+  .area-asistencia {
+    margin-top: 24px;
+    padding-bottom: 75px;
+  }
+
+  .panel-asistencia {
+    padding: 22px 20px;
+    min-height: 340px;
+  }
+
+  /* Mueve el botón (+) a la esquina inferior derecha en móvil */
+  .btn-mas {
+    right: 20px;
+    bottom: 20px;
+    top: auto;
+    transform: none;
+    width: 58px;
+    height: 58px;
+    font-size: 22px;
+  }
+
+  .btn-mas:hover {
+    transform: scale(1.06);
+  }
+
+  /* Ajustes de espacio en la vista de Miembros en móvil */
+  .area-Miembros {
+    margin-top: 24px;
+  }
+
+  .panel-asistencia-M {
+    padding: 22px 20px;
+    min-height: 340px;
+  }
+
+  .acciones-M {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .btn-nuevos-M {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  .btn-icono-M {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
   }
 }

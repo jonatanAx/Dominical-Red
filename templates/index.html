@@ -13,23 +13,34 @@
   </head>
   <body>
     <!-- navbar -->
-    <div class="burbuja">
-      <div class="logo-container">
-        <a href="index.html">
-          <img
-            src="/static/img/1-removebg-preview.png"
-            alt="Red Dominical"
-            class="img-logo"
-          />
-        </a>
-      </div>
+<div class="burbuja">
+  <div class="logo-container">
+    <a href="index.html">
+      <img
+        src="/static/img/1-removebg-preview.png"
+        alt="Red Dominical"
+        class="img-logo"
+      />
+    </a>
+  </div>
 
-      <nav class="menu">
-        <a href="Asistencia.html" class="boton-menu">Asistencia</a>
-        <a href="Miembros.html" class="boton-menu">Miembros</a>
-        <a href="Faltas.html" class="boton-menu">Faltas</a>
-      </nav>
+  <nav class="menu">
+    <a href="Miembros.html" class="boton-menu">Miembros</a>
+    <a href="Faltas.html" class="boton-menu">Faltas</a>
+
+    <div class="dropdown-privilegios">
+      <button type="button" class="boton-menu btn-privilegios">
+        Privilegios <i class="fa-solid fa-chevron-down"></i>
+      </button>
+
+      <div class="lista-privilegios">
+        <a href="#" class="boton-menu item-privilegio">Musicos</a>
+        <a href="#" class="boton-menu item-privilegio">Pastores</a>
+        <a href="#" class="boton-menu item-privilegio">Diaconisas</a>
+      </div>
     </div>
+  </nav>
+</div>
 
     <!---CONTENEDOR TARJETAS-->
     <div class="contenedor-tarjetas">
