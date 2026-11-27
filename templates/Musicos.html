@@ -42,6 +42,20 @@
       </div>
     </div>
 
-    
+    <div class="area-asistencia">
+      <div class="panel-asistencia">
+        <p class="fecha-asistencia">{{ fecha_actual }}</p>
+
+        <div class="scroll-nombres">
+          <ul class="lista-asistencia">
+            {% for persona in asistencias %}
+            <li>{{ persona.nombre }}</li>
+            {% else %}
+            <li>No hay asistencias registradas aún.</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
