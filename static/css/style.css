@@ -1,5 +1,5 @@
 /* Reset básico: quita márgenes y rellenos por defecto y hace que padding/border no agranden el tamaño total */
-- {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
